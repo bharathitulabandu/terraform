@@ -9,6 +9,7 @@ resource "aws_instance" "webserver" {
             #!/bin/bash
             yum install httpd
             service start httpd
+            cd /var/www/html
             echo " hello world " > index.html
             EOF
 }
