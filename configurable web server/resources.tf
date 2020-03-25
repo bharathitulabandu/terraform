@@ -22,7 +22,6 @@ resource "aws_security_group" "websevrerSG" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
 output "public_ip" {
   value       = aws_instance.webserver.public_ip
 }
