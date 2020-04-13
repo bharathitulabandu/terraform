@@ -24,9 +24,8 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 terraform {
   backend "s3" {
-    # Replace this with your bucket name!
     bucket         = "tvlb-tf-bknd"
-    key            = "Desktop/assignment3/terraform.tfstate"
+    key            = "terraform.tfstate"
     region         = "ap-south-1"
     dynamodb_table = "terraform-tvlb"
     encrypt        = true
