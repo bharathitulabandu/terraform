@@ -31,3 +31,6 @@ resource "aws_volume_attachment" "vol" {
  volume_id = aws_ebs_volume.data-vol.id
  instance_id = aws_instance.web_server.id
 }
+  
+#if EBS should remain while running the terraform destroy , we can specify the target in the command 
+#eg:terraform destroy -target=aws_instance.web_server(this command will only destroy the instance , it will not destroy the EBS volume which is attached to it)
